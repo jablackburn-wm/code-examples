@@ -1,0 +1,63 @@
+
+/* syntax is the 'selector', meaning a way of specifing which element the styles are applied to,
+followed by curly braces and property: value; pairs. */
+
+selector {
+    property: value;
+    other-property: value;
+}
+
+/* here are all types of selectors: */
+
+
+/* by element name */
+h1 {
+    property: value;
+}
+
+/* by class */
+.class {
+    property: value;
+}
+
+/* by id */
+#id {
+    property: value;
+}
+
+
+/* by element-specific class */
+p.class {
+    property: value;
+}
+
+/* by descendant selector
+applied to p tags within div */
+
+div p {
+    property: value;
+}
+
+/* by child selector
+only applied to direct children of a certain element */
+div > p {
+    property: value;
+}
+
+/* by adjacent selector
+applied to element of a certain tag which come directly after an element */
+h1 + p {
+    property: value;
+}
+
+/* by general sibling selector
+applied to all sibling elements of a certain tag after an element */
+h1 ~ p {
+    property: value;
+}
+
+/* by multiple selectors */
+h1, #id, .class, div > p {
+    property: value;
+}
+

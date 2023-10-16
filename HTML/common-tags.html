@@ -1,0 +1,88 @@
+
+<!-- HTML -->
+
+<html>html</html> <!-- parent element for all html in a document. usually only holds 2 children: head and body -->
+
+
+<head>head</head> <!-- contains elements which define important metadata, links and other info about the page. goes before the body tag -->
+
+<meta>metadata</meta> <!-- defines metadata about the document within the head element -->
+
+<link rel="relationship" href="path/file.ext"> <!-- self closing tag which defines a relationship with an external resource, usually used to import a script or stylesheet. -->
+<!-- here the 'rel' attribute defines the relationship between the html and the linked file, in the case of external CSS, this will be "stylesheet" for example.-->
+<!-- the 'href' attribute is the URL of the resource being linked. To link a CSS file for example, this would be: href="styles.css" -->
+<!-- this tag is used mostly to add CSS, Javascript, or a favicon to the page -->
+
+<body>body</body> <!-- contains the content of the page -->
+
+
+
+
+<!-- HEADERS -->
+
+<h1>header 1</h1> <!-- h1 is used for the most important header for the document. header elements are displayed in large font by default -->
+
+<h6>header 6</h6> <!-- h6 is the least important header. headers are numbered 1-6, in order of there importance. they are displayed as smaller and smaller from 1-6. -->
+
+
+
+<!-- TEXT -->
+
+<p>paragraph</p> <!-- this is a generic paragraph element, used to define text sections within the document -->
+
+<strong>text</strong> <!-- makes text bold -->
+
+<em>text</em> <!-- makes text emphasised and italicized -->
+<i>text</i> <!-- makes text italicized -->
+
+
+
+<!-- SECTIONS -->
+
+<div>div</div> <!-- div is the most generic way to section off portions of the web page. this is usually used as a container for child elements -->
+
+<section>section</section> <!-- section is another more semantic way to section off content like with the div tag. -->
+
+<span>span</span> <!-- span is basically another version of div as well. -->
+
+
+
+<!-- LISTS -->
+
+<ul> <!-- unordered list, list items are displayed with bullet points -->
+    <li>unordered list item</li>
+    <li>unordered list item</li>
+</ul>
+
+<ol> <!-- same as ul, but list items are numbered -->
+    <li>ordered list item</li>
+    <li>ordered list item</li>
+</ol>
+
+<dl> <!-- descriptive list, used for list items with descriptions/captions -->
+    <dt>list item title</dt> <!-- list item name/title -->
+    <dd>list item description/caption</dd> <!-- list item description/caption-->
+    <dt>list item title</dt>
+    <dd>list item description/caption</dd>
+</dl>
+
+
+
+<!-- OTHER -->
+
+<a href="URL" target="_blank">link</a> <!-- creates a link to another webpage -->
+<!-- href is the url to navigate to -->
+<!-- target defines where to open the url, '_blank' for instance, opens the page in a new tab/window-->
+
+<button>button</button> <!-- button element is a button usually used to execute some javascript upon being clicked -->
+
+<img src="URL" alt="image name"> <!-- used to add an image to document-->
+<!-- src is the url of the image resource -->
+<!-- alt will replace the image if it fails to be loaded. also used by screen readers for the visually impared -->
+
+<script>javascript</script> <!-- this tag defines the javascript to be run in the browser. the script tag is rarely useful, most often js files will simply be linked in the head tag instead. -->
+
+
+
+
+

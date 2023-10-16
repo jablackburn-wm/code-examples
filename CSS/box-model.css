@@ -1,0 +1,36 @@
+/* box model arranges the style of an element into nested boxes. 
+the innermost box is the content of the element, 
+followed by the padding around it. 
+borders go around the padding and background colors end at the border.
+after the border is the margin, which is not affected by background color.  */
+
+div {
+    width: 50%; /* sets width of content box to 50% of the page's width. */
+    max-width: 500px; /* sets maximum width of content to 500px. if width goes above 1000px, the width will be fixed at 500px. */
+    height: 200px; /* sets height of content to 200px */
+    padding: 20px; /* sets padding of width: 20px on each side of the content */
+    border: 1px solid black; /* adds 1px solid black border around the padding area */
+    margin: 20px 0 10px 0; /* sets a margin of 20px on the top of the border, 0px on each side, and 10px on the bottom. */
+}
+
+
+/* padding/margin/border-width shorthand:
+one can use shorthand to avoid redundant code.
+supplying a single value to padding, margin, or border width will apply that value on all 4 sides of the box model.
+supplying 2 values will apply the first value to the top and bottom, the second value to the sides.
+supplying 3 values will apply the values in this order: top, both sides, bottom.
+supplying 4 values will apply the values in this order: top, right, bottom, left. in other words, clockwise beginning at 12 o'clock. */
+
+/* alternatively, you can specify values for specific sides with:
+padding-(side):
+margin-(side):
+border-(side)-width:
+where (side) can be top, bottom, left, or right.  */
+
+/* for example: */
+
+div {
+    border-left-width: 10px;
+    padding-right: 20px;
+    margin-top: 100px;
+}

@@ -1,0 +1,64 @@
+
+/* color / background-color */
+
+p {
+    color: red; /* sets text color to red */
+    background-color: aliceblue; /* sets background color to aliceblue */
+}
+
+/* or */
+
+p {
+    color: rgb(230, 200, 105); /* sets text color to specified rgb value */
+    background-color: rgba(0, 255, 255, 0.5); /* sets background color to specified rgba value */
+}
+
+/* font properties */
+
+p {
+    font-size: large; /* makes text large */
+    font-weight: bolder; /* makes text bold */
+    font-family: monospace; /* sets the font of text */
+} 
+
+/* text properties */
+
+p {
+    text-align: center; /* aligns text to center */
+    text-decoration: underline; /* underlines text */
+    text-shadow: 1px 1px white; /* adds white text shadow 1px to the right and 1px below the original text */
+}
+
+/* border */
+
+div { /* shorthand */
+    border: 5px solid black /* solid black border, 5px on all sides */
+}
+
+div {
+    border-color: aqua; /* colors border aqua */
+    border-style: dashed; /* border is dashed */
+    border-width: 10px 0 10px 5px; /* 10px on the top and bottom, 0px on the right, 5px on the left */
+    border-radius: 5px; /* rounds the corners with a radius of 5px */
+}
+
+div {
+    border: 2px double dodgerblue;
+    border-radius: 100%; /* circular border */
+}
+
+/* background image */
+
+div {
+    background-image: url('image_url');
+    background-position: center; /* image will appear in the center of the container */
+    background-size: cover; /* resizes image to cover the entire container without changing tha aspect ratio */
+    background-repeat: no-repeat; /* image will not repeat */
+}
+
+/* image properties */
+
+img {
+    object-fit: contain; /* fits image to be fully within by the container without changing aspect ratio*/
+    display: block;
+}
