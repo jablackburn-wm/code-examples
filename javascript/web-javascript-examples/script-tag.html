@@ -1,0 +1,14 @@
+<script>
+    //valid js
+</script>
+
+<script src="script-file.js"></script> <!-- regular import, use ./ for relative path, / for absolute path. here neither are used since the file is in the local directory -->
+
+<script type="module" src="modular-javascript.js"></script> <!-- importing file with ES6 modules -->
+<script nomodule src="fallback.js"></script> <!-- fallback script for browsers without support for type='module' -->
+
+<script src="script.js"></script> <!-- pauses parsing to download and execute -->
+<script src="script.js" async></script>  <!-- downloads while parsing, pauses parsing to execute -->
+<script src="script.js" defer></script>  <!-- downloads while parsing, waits until parsing and downloading are done to execute -->
+
+
