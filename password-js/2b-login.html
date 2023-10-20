@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Javascript Password</title>
+
+    <!-- (A) LOAD CRYPTO JS LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+    // (B) PROCESS LOGIN
+    function login () {
+      // (B1) SET EMAIL
+      var data = new FormData();
+      data.append("email", document.getElementById("user-email").value);
+
+      // (B2) AJAX REQUEST - GET + CHECK PASSWORD FROM SERVER
+      fetch("get-user.txt")
+      .then((res) => { return res.json(); })
+      .then((res) => {
+        // (B2-1) DECRYPT
+        let decipher = CryptoJS.AES.decrypt(res.password, "CIPHERKEY").toString(CryptoJS.enc.Utf8);
+
+        // (B2-2) MATCH!
+        if (decipher == document.getElementById("user-password").value) {
+          alert("OK!");
+          // location.href = "members.html";
+        }
+
+        // (B2-3) WRONG
+        else { alert("Invalid password"); }
+      });
+      return false;
+    }
+    </script>
+  </head>
+  <body>
+    <!-- (C) LOGIN FORM -->
+    <form onsubmit="return login()">
+      <input type="email" id="user-email" required value="john@doe.com"/>
+      <input type="password" id="user-password" required value="Hello World 12345"/>
+      <input type="submit" value="Sign in"/>
+    </form>
+  </body>
+</html>

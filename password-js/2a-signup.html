@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Javascript Password</title>
+
+    <!-- (A) LOAD CRYPTO JS LIBRARY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+    <script>
+    // (B) ENCRYPT PASSWORD
+    function crypt () {
+      // (B1) GET PASSWORD + ENCRYPT
+      var password = document.getElementById("user-password");
+      var cipher = CryptoJS.AES.encrypt(password.value, "CIPHERKEY");
+      cipher = cipher.toString();
+
+      // (B2) SET ENCRYPTED PASSWORD TO HIDDEN FIELD
+      document.getElementById("user-real-password").value = cipher;
+
+      // (B3) REMOVE CLEAR TEXT PASSWORD
+      password.value = "";
+
+      // (B4) SUBMIT FORM
+      return true;
+    }
+    </script>
+  </head>
+  <body>
+    <!-- (C) REGISTRATION FORM -->
+    <form onsubmit="return crypt()">
+      <input type="email" name="email" required value="john@doe.com"/>
+      <input type="password" id="user-password" required value="Hello World 12345"/>
+      <input type="hidden" id="user-real-password" name="password"/>
+      <input type="submit" value="Register"/>
+    </form>
+  </body>
+</html>
